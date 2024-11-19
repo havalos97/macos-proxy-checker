@@ -4,7 +4,7 @@ import sys
 
 
 def check_proxy() -> None:
-    if are_proxy_bypass_domains_set() and is_auto_proxy_state_on():
+    if are_proxy_bypass_domains_set() or is_auto_proxy_state_on():
         write_log("Proxy is enabled, disabling it...")
         disable_proxy_state()
     else:
